@@ -1,11 +1,22 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>محلل المبيعات الذكي | Smart Sales Analyst</title>
-  <meta name="description" content="تقارير يومية وأسبوعية وشهرية عن مبيعات متجرك في سلة. Daily, weekly and monthly sales reports for Salla stores.">
-  <link rel="icon" type="image/png" href="logo.png">
+  <title>محلل المبيعات الذكي</title>
+  <meta name="description" content="تقارير يومية وأسبوعية وشهرية عن مبيعات متجرك في سلة.">
+  <link rel="icon" type="image/png" href="logo.png?v=2">
+  <script>
+    // اللغة: ?lang=ar أو ?lang=en في الرابط، وإلا لغة المتصفح (الإنجليزي لو أول لغة إنجليزية)، والافتراضي عربي.
+    // تنطبق قبل رسم الصفحة عشان ما تبان اللغة الثانية لحظة.
+    (function () {
+      var param = new URLSearchParams(location.search).get('lang');
+      var browser = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      var lang = param === 'en' || param === 'ar' ? param : /^en\b/i.test(browser) ? 'en' : 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+    })();
+  </script>
   <style>
     :root {
       --brand: #0B7A68;
@@ -22,21 +33,24 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Noto Sans", Arial, sans-serif;
-      line-height: 1.7;
+      font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      line-height: 1.8;
     }
-    header {
-      background: var(--brand);
-      color: #fff;
-      padding: 48px 16px 40px;
-      text-align: center;
+    html[lang="en"] body { font-family: "Segoe UI", -apple-system, "Helvetica Neue", Roboto, Arial, sans-serif; line-height: 1.6; }
+    /* لغة وحدة بس تظهر */
+    html[lang="ar"] [data-lang="en"], html[lang="en"] [data-lang="ar"] { display: none !important; }
+
+    header { background: var(--brand); color: #fff; padding: 16px 16px 40px; text-align: center; }
+    .switch { display: flex; justify-content: flex-end; gap: 4px; max-width: 880px; margin: 0 auto 16px; }
+    .switch a {
+      color: #fff; text-decoration: none; font-size: 0.9rem; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45); min-width: 72px; text-align: center;
     }
+    .switch a[aria-current="true"] { background: #fff; color: var(--brand-dark); border-color: #fff; font-weight: 600; }
     header img { width: 112px; height: 112px; border-radius: 24px; display: block; margin: 0 auto 16px; }
-    header h1 { margin: 0; font-size: 2rem; }
-    header .en-name { margin: 4px 0 0; font-size: 1.1rem; opacity: 0.9; }
+    header h1 { margin: 0; font-size: 2rem; line-height: 1.3; }
+
     main { max-width: 880px; margin: 0 auto; padding: 32px 16px 48px; }
-    .lang { padding: 8px 0 24px; }
-    .lang + .lang { border-top: 1px solid var(--line); padding-top: 32px; }
     h2 { color: var(--brand); font-size: 1.4rem; margin: 0 0 8px; }
     h3 { font-size: 1.05rem; margin: 24px 0 8px; }
     p { margin: 0 0 12px; }
@@ -52,13 +66,17 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="شعار محلل المبيعات الذكي" width="112" height="112">
-    <h1>محلل المبيعات الذكي</h1>
-    <p class="en-name" lang="en" dir="ltr">Smart Sales Analyst</p>
+    <nav class="switch" aria-label="اللغة / Language">
+      <a href="?lang=ar" data-set-lang="ar" lang="ar" dir="rtl">عربي</a>
+      <a href="?lang=en" data-set-lang="en" lang="en" dir="ltr">English</a>
+    </nav>
+    <img src="logo.png?v=2" alt="" width="112" height="112">
+    <h1 data-lang="ar">محلل المبيعات الذكي</h1>
+    <h1 data-lang="en">Smart Sales Analyst</h1>
   </header>
 
   <main>
-    <section class="lang" dir="rtl" lang="ar">
+    <section data-lang="ar">
       <h2>تقرير متجرك يصلك جاهزًا</h2>
       <p class="lead">تقارير يومية وأسبوعية وشهرية عن مبيعات متجرك في سلة، بالعربية أو الإنجليزية: أهم الأرقام والمقارنات، وملاحظات مختصرة، وتوصية واحدة واضحة، في ملف PDF.</p>
 
@@ -73,14 +91,14 @@
       <ul class="points">
         <li>تُحسب جميع الأرقام بدقة من بيانات متجرك، ويقتصر دور الذكاء الاصطناعي على كتابة الملخص والملاحظات.</li>
         <li>تختار لغة التقرير ووقته والتقارير التي تريدها.</li>
-        <li>قراءة فقط. لا نحفظ أسماء عملائك ولا أرقام جوالاتهم ولا إيميلاتهم.</li>
+        <li>قراءة فقط. لا نحفظ أسماء عملائك ولا أرقام هواتفهم ولا عناوين بريدهم الإلكتروني.</li>
       </ul>
 
       <h3>الدعم</h3>
       <p class="contact">للاستفسارات والدعم: <a href="mailto:anas.alsuhaimy@gmail.com">anas.alsuhaimy@gmail.com</a></p>
     </section>
 
-    <section class="lang" dir="ltr" lang="en">
+    <section data-lang="en">
       <h2>Your store report, ready for you</h2>
       <p class="lead">Daily, weekly and monthly sales reports for your Salla store in Arabic or English: key numbers, comparisons, short insights and one clear recommendation, in a PDF.</p>
 
@@ -95,7 +113,7 @@
       <ul class="points">
         <li>Every number is calculated precisely from your store data; AI only writes the summary and insights.</li>
         <li>You choose the report language, time and which reports you get.</li>
-        <li>Read-only access. We don't store your customers' names, phone numbers or emails.</li>
+        <li>Read-only access. We don't store your customers' names, phone numbers or email addresses.</li>
       </ul>
 
       <h3>Support</h3>
@@ -103,6 +121,39 @@
     </section>
   </main>
 
-  <footer>محلل المبيعات الذكي <span>✦</span> Smart Sales Analyst</footer>
+  <footer><span data-lang="ar">محلل المبيعات الذكي</span><span data-lang="en">Smart Sales Analyst</span> <span>✦</span></footer>
+
+  <script>
+    // العنوان والوصف والاتجاه وزر اللغة الحالي يتغيرون مع اللغة. زر التبديل يغيّر الرابط (?lang=)
+    // بدون إعادة تحميل، فالرابط ينفع ينرسل لأحد بنفس اللغة.
+    (function () {
+      var TEXT = {
+        ar: { title: 'محلل المبيعات الذكي', description: 'تقارير يومية وأسبوعية وشهرية عن مبيعات متجرك في سلة.', logo: 'شعار محلل المبيعات الذكي' },
+        en: { title: 'Smart Sales Analyst', description: 'Daily, weekly and monthly sales reports for your Salla store.', logo: 'Smart Sales Analyst logo' },
+      };
+      function apply(lang) {
+        var root = document.documentElement;
+        root.lang = lang;
+        root.dir = lang === 'en' ? 'ltr' : 'rtl';
+        document.title = TEXT[lang].title;
+        document.querySelector('meta[name="description"]').setAttribute('content', TEXT[lang].description);
+        document.querySelector('header img').alt = TEXT[lang].logo;
+        document.querySelectorAll('[data-set-lang]').forEach(function (a) {
+          a.setAttribute('aria-current', a.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+      }
+      apply(document.documentElement.lang === 'en' ? 'en' : 'ar');
+      document.querySelectorAll('[data-set-lang]').forEach(function (a) {
+        a.addEventListener('click', function (event) {
+          event.preventDefault();
+          var lang = a.getAttribute('data-set-lang');
+          apply(lang);
+          var url = new URL(location.href);
+          url.searchParams.set('lang', lang);
+          history.replaceState(null, '', url);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
