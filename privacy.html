@@ -149,6 +149,7 @@
           <tr><td>ملف التقرير (PDF)</td><td>يُحذف فور انتهاء إرسال إيميلاته (وصلت أو فشلت أو فات وقتها)، وبحد أقصى ٧ أيام.</td></tr>
           <tr><td>محتوى الإيميل قبل إرساله</td><td>يُحفظ مشفّرًا، ويُحذف فور انتهاء إرساله (وصل أو فشل أو فات وقته).</td></tr>
           <tr><td>إشعارات سلة (مثل التثبيت وتغيير الإعدادات)</td><td>تُحفظ مشفّرة إلى أن تُعالَج، ثم يُحذف محتواها.</td></tr>
+          <tr><td>سجل التقارير (النوع والفترة والحالة وموضوع التوصية)</td><td>١٢ شهرًا، ويُحذف فورًا عند حذف التطبيق.</td></tr>
           <tr><td>سجل تغييرات الاشتراك (نوع الخطة والتواريخ، بدون أي مبلغ)</td><td>١٢ شهرًا.</td></tr>
         </table>
       </div>
@@ -192,17 +193,18 @@
         <li>ملفات التقارير.</li>
         <li>مفاتيح الربط مع سلة.</li>
         <li>محتوى إشعارات سلة الخاصة بمتجرك.</li>
+        <li>اسم متجرك.</li>
+        <li>سجل التقارير.</li>
       </ul>
       <p>وتعود إعدادات التقرير إلى الوضع الافتراضي، وتتوقف كل التقارير.</p>
       <p>يبقى بعد الحذف:</p>
       <ul>
-        <li>سجل أساسي لمتجرك: رقمه في سلة واسمه ونوعه وتاريخ التثبيت والحذف، و<b>تاريخ بدء التجربة المجانية وتاريخ تقرير آخر ٣٠ يومًا</b>. نبقيهما حتى لا تتكرر التجربة المجانية أو التقرير الترحيبي عند إعادة التثبيت.</li>
-        <li>سجل التقارير التي أُرسلت (نوعها وفترتها وحالتها وموضوع التوصية)، بدون ملفات التقارير.</li>
+        <li>سجل أساسي لمتجرك: رقمه في سلة ونوعه وتاريخ التثبيت والحذف، و<b>تاريخ بدء التجربة المجانية وتاريخ تقرير آخر ٣٠ يومًا</b>. نبقي هذين التاريخين حتى لا تتكرر التجربة المجانية أو التقرير الترحيبي عند إعادة التثبيت.</li>
         <li>سجل تغييرات الاشتراك، ويُحذف بعد ١٢ شهرًا.</li>
       </ul>
 
       <h2>إيقاف الإرسال لعنوان بريد</h2>
-      <p>أي شخص يصله تقرير منّا يستطيع أن يطلب إيقاف الإرسال إلى بريده، بمراسلتنا على <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>. نضيف العنوان إلى قائمة «عدم الإرسال»، فلا يصله منّا أي إيميل من أي متجر، حتى لو أُضيف في إعدادات التطبيق.</p>
+      <p>أي شخص يصله تقرير منّا يستطيع أن يطلب إيقاف الإرسال إلى بريده، بمراسلتنا على <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>. خلال ٧ أيام من طلبك نضيف العنوان إلى قائمة «عدم الإرسال»، فلا يصله منّا أي إيميل من أي متجر، حتى لو أُضيف في إعدادات التطبيق.</p>
       <p>تبقى هذه القائمة حتى بعد حذف التطبيق، لأن الغرض منها ألا نراسل هذا العنوان مرة أخرى.</p>
 
       <h2>كيف نحمي البيانات</h2>
@@ -211,8 +213,11 @@
         <li>نتحقق من توقيع كل إشعار يصلنا من سلة قبل قبوله.</li>
         <li>بيئة التشغيل وقاعدة بياناتها منفصلة عن بيئة التطوير.</li>
         <li>الوصول إلى الخوادم وقاعدة البيانات مقتصر على مطوّر التطبيق.</li>
-        <li>سجلات التشغيل لا تحتوي أسماء ولا عناوين بريد ولا محتوى الطلبات.</li>
+        <li>نصمم سجلات التشغيل بحيث لا تحتوي أسماء ولا عناوين بريد ولا محتوى الطلبات.</li>
       </ul>
+
+      <h2>حقوقك</h2>
+      <p>لطلب حذف بيانات متجرك، احذف التطبيق من متجرك، أو راسلنا على <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>، ونرد خلال ٧ أيام.</p>
 
       <h2>تحديث هذه السياسة</h2>
       <p>قد نحدّث هذه السياسة إذا تغيّر ما نجمعه أو طريقة عمل التطبيق. ننشر النسخة الجديدة في هذه الصفحة ونغيّر تاريخ «آخر تحديث» أعلاها.</p>
@@ -279,6 +284,7 @@
           <tr><td>Report file (PDF)</td><td>Deleted as soon as its emails are done (delivered, failed or expired), and within 7 days at most.</td></tr>
           <tr><td>Email content before sending</td><td>Kept encrypted, and deleted as soon as sending is done (delivered, failed or expired).</td></tr>
           <tr><td>Salla notifications (such as installation and settings changes)</td><td>Kept encrypted until processed, then their content is deleted.</td></tr>
+          <tr><td>Report log (type, period, status and recommendation topic)</td><td>12 months, and deleted immediately when you uninstall the app.</td></tr>
           <tr><td>Subscription change log (plan type and dates, no amounts)</td><td>12 months.</td></tr>
         </table>
       </div>
@@ -322,17 +328,18 @@
         <li>Report files.</li>
         <li>The Salla connection keys.</li>
         <li>The content of Salla notifications for your store.</li>
+        <li>Your store name.</li>
+        <li>The report log.</li>
       </ul>
       <p>Report settings go back to the defaults, and all reports stop.</p>
       <p>What remains after uninstalling:</p>
       <ul>
-        <li>A basic record of your store: its Salla ID, name, type, installation and removal dates, and <b>the date your free trial started and the date of your last-30-days report</b>. We keep these so the free trial and the welcome report aren't repeated if you reinstall.</li>
-        <li>The log of reports sent (type, period, status and recommendation topic), without the report files.</li>
+        <li>A basic record of your store: its Salla ID, type, installation and removal dates, and <b>the date your free trial started and the date of your last-30-days report</b>. We keep these two dates so the free trial and the welcome report aren't repeated if you reinstall.</li>
         <li>The subscription change log, deleted after 12 months.</li>
       </ul>
 
       <h2>Stopping emails to an address</h2>
-      <p>Anyone who receives a report from us can ask us to stop sending to their address by writing to <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>. We add the address to a do-not-send list, and it will no longer receive any email from us for any store, even if it is added in the app settings.</p>
+      <p>Anyone who receives a report from us can ask us to stop sending to their address by writing to <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>. Within 7 days of your request, we add the address to a do-not-send list, and it will no longer receive any email from us for any store, even if it is added in the app settings.</p>
       <p>This list stays after the app is uninstalled, because its purpose is to make sure we don't email that address again.</p>
 
       <h2>How we protect data</h2>
@@ -341,8 +348,11 @@
         <li>We verify the signature of every notification from Salla before accepting it.</li>
         <li>The production environment and its database are separate from development.</li>
         <li>Access to the servers and database is limited to the app's developer.</li>
-        <li>Operational logs contain no names, email addresses or order contents.</li>
+        <li>We design our operational logs so they contain no names, email addresses or order contents.</li>
       </ul>
+
+      <h2>Your rights</h2>
+      <p>To request deletion of your store data, uninstall the app from your store, or write to us at <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>, and we will respond within 7 days.</p>
 
       <h2>Changes to this policy</h2>
       <p>We may update this policy if what we collect or how the app works changes. We publish the new version on this page and change the "Last updated" date at the top.</p>
