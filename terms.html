@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شروط الاستخدام | محلل المبيعات الذكي</title>
+  <meta name="description" content="شروط استخدام تطبيق محلل المبيعات الذكي في سلة.">
+  <link rel="icon" type="image/png" href="logo.png?v=2">
+  <script>
+    // اللغة: ?lang=ar أو ?lang=en في الرابط، وإلا لغة المتصفح، والافتراضي عربي (نفس الصفحة الرئيسية).
+    (function () {
+      var param = new URLSearchParams(location.search).get('lang');
+      var browser = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      var lang = param === 'en' || param === 'ar' ? param : /^en\b/i.test(browser) ? 'en' : 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+    })();
+  </script>
+  <style>
+    :root {
+      --brand: #0B7A68;
+      --brand-dark: #08594C;
+      --accent: #FFC27A;
+      --ink: #1C2B28;
+      --muted: #5B6B67;
+      --paper: #FFFFFF;
+      --tint: #EEF6F4;
+      --line: #D7E6E2;
+      --draft: #FFF4E5;
+      --draft-ink: #7A4B00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      line-height: 1.8;
+    }
+    html[lang="en"] body { font-family: "Segoe UI", -apple-system, "Helvetica Neue", Roboto, Arial, sans-serif; line-height: 1.6; }
+    html[lang="ar"] [data-lang="en"], html[lang="en"] [data-lang="ar"] { display: none !important; }
+
+    header { background: var(--brand); color: #fff; padding: 16px 16px 28px; text-align: center; }
+    .switch { display: flex; justify-content: flex-end; gap: 4px; max-width: 880px; margin: 0 auto 12px; }
+    .switch a {
+      color: #fff; text-decoration: none; font-size: 0.9rem; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45); min-width: 72px; text-align: center;
+    }
+    .switch a[aria-current="true"] { background: #fff; color: var(--brand-dark); border-color: #fff; font-weight: 600; }
+    header .home { display: inline-block; color: #fff; text-decoration: none; }
+    header img { width: 64px; height: 64px; border-radius: 16px; display: block; margin: 0 auto 8px; }
+    header .app { display: block; font-size: 0.95rem; opacity: 0.9; }
+    header h1 { margin: 4px 0 0; font-size: 1.8rem; line-height: 1.3; }
+
+    main { max-width: 880px; margin: 0 auto; padding: 24px 16px 48px; }
+    .draft { background: var(--draft); color: var(--draft-ink); border: 1px solid #F3D3A4; border-radius: 12px; padding: 10px 14px; font-weight: 600; margin: 0 0 16px; }
+    .updated { color: var(--muted); margin: 0 0 24px; }
+    h2 { color: var(--brand); font-size: 1.25rem; margin: 32px 0 8px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-inline-start: 22px; }
+    li { margin: 0 0 6px; }
+    main a { color: var(--brand); font-weight: 600; overflow-wrap: anywhere; }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 0 16px 32px; }
+    footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 8px; }
+    footer nav a { color: var(--brand); text-decoration: none; }
+    footer nav a[aria-current="page"] { color: var(--muted); font-weight: 600; }
+    footer .star { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="switch" aria-label="اللغة / Language">
+      <a href="?lang=ar" data-set-lang="ar" lang="ar" dir="rtl">عربي</a>
+      <a href="?lang=en" data-set-lang="en" lang="en" dir="ltr">English</a>
+    </nav>
+    <a class="home" href="./" data-keep-lang>
+      <img src="logo.png?v=2" alt="" width="64" height="64">
+      <span class="app" data-lang="ar">محلل المبيعات الذكي</span>
+      <span class="app" data-lang="en">Smart Sales Analyst</span>
+    </a>
+    <h1 data-lang="ar">شروط الاستخدام</h1>
+    <h1 data-lang="en">Terms of Use</h1>
+  </header>
+
+  <main>
+    <!-- ===================== العربي ===================== -->
+    <article data-lang="ar">
+      <p class="draft">مسودة للمراجعة</p>
+      <p class="updated">آخر تحديث: ١٦ نوفمبر ٢٠٢٦</p>
+
+      <p>هذه الشروط تنظّم استخدامك لتطبيق «محلل المبيعات الذكي» في سلة. بتثبيت التطبيق واستخدامه فأنت توافق عليها، وعلى <a href="privacy.html" data-keep-lang>سياسة الخصوصية</a>.</p>
+
+      <h2>وصف الخدمة</h2>
+      <p>يقرأ التطبيق بيانات متجرك من سلة (قراءة فقط)، ويرسل لك بالبريد الإلكتروني تقارير بصيغة PDF، بالعربية أو الإنجليزية حسب اختيارك:</p>
+      <ul>
+        <li><b>اليومي:</b> آخر ٢٤ ساعة مقارنةً بالساعات نفسها قبل أسبوع.</li>
+        <li><b>الأسبوعي:</b> آخر ٧ أيام كاملة مقارنةً بالأسبوع الذي قبلها.</li>
+        <li><b>الشهري:</b> الشهر الميلادي السابق كاملًا مقارنةً بالشهر الذي قبله.</li>
+        <li><b>تقرير آخر ٣٠ يومًا:</b> مرة واحدة بعد التثبيت.</li>
+      </ul>
+      <p>أرقام التقرير يحسبها كود التطبيق، ويكتب الذكاء الاصطناعي (Anthropic) الملخص والملاحظات والتوصية من هذه الأرقام. وإذا تعذّرت كتابته، يصلك التقرير بكل أرقامه مع ملخص قصير يكتبه التطبيق تلقائيًا وبدون توصية.</p>
+      <p>تختار اللغة ووقت الإرسال والتقارير التي تريدها وعناوين البريد (حتى خمسة) من إعدادات التطبيق في لوحة سلة.</p>
+
+      <h2>الاشتراك والتجربة المجانية والإلغاء</h2>
+      <ul>
+        <li>الاشتراك والدفع والتجربة المجانية والإلغاء كلها تتم عن طريق سلة، ووفق سياساتها. نحن لا نستلم بيانات الدفع.</li>
+        <li>التجربة المجانية مدتها ٧ أيام.</li>
+        <li>الأسعار وتفاصيل الخطط ومزايا كل خطة معروضة في صفحة التطبيق في متجر تطبيقات سلة، وهي المرجع.</li>
+        <li>تُرسل التقارير التي تشملها خطتك فقط. التقرير اليومي متاح في التجربة المجانية وفي الخطة الكاملة.</li>
+        <li>عند إلغاء الاشتراك تستمر التقارير حتى نهاية الفترة المدفوعة كما تبلغنا بها سلة، ثم تتوقف. وعند انتهاء التجربة أو الاشتراك بدون تجديد تتوقف التقارير.</li>
+        <li>طلبات استرداد المبالغ تخضع لسياسات سلة.</li>
+      </ul>
+
+      <h2>التقارير استرشادية</h2>
+      <p>التقارير والملاحظات والتوصيات للمساعدة فقط. القرار في متجرك (الأسعار، والمخزون، والعروض، وغيرها) قرارك أنت، وأنت المسؤول عنه. قد يحتوي النص الذي يكتبه الذكاء الاصطناعي على صياغة غير دقيقة، فراجع الأرقام قبل أي قرار مهم.</p>
+
+      <h2>الأرقام قد تختلف عن لوحة سلة</h2>
+      <p>تعتمد الأرقام على البيانات التي تعطينا إياها سلة وقت إعداد التقرير، وقد تختلف عمّا تعرضه لوحة سلة في بعض الحالات، منها:</p>
+      <ul>
+        <li><b>حالات الطلب:</b> نحسب الطلبات التي بانتظار المراجعة، وقيد التنفيذ، والمكتملة، والمشحونة، وقيد التوصيل، والمسلّمة، والمغلقة. ولا نحسب الطلبات الملغية، أو التي بانتظار الدفع، أو المسترجعة، أو المحذوفة، أو طلبات عروض الأسعار.</li>
+        <li><b>طريقة الحساب:</b> صافي المبيعات عندنا هو مجموع المنتجات بعد الخصم، بدون الضريبة والشحن.</li>
+        <li><b>التوقيت:</b> الفترات تُحسب حسب المنطقة الزمنية لمتجرك.</li>
+        <li><b>التغييرات اللاحقة:</b> إذا تغيّرت حالة طلب أو مبلغه بعد إعداد التقرير، فلن يظهر التغيير في التقرير الذي أُرسل، ويظهر في التقارير التالية التي تشمل فترته.</li>
+      </ul>
+
+      <h2>مسؤوليتك</h2>
+      <ul>
+        <li>عناوين البريد التي تضيفها في الإعدادات يجب أن تكون لك أو لأشخاص وافقوا على استلام تقارير متجرك.</li>
+        <li>لا تستخدم التطبيق بطريقة تخالف سياسات سلة أو الأنظمة المعمول بها.</li>
+      </ul>
+
+      <h2>حدود المسؤولية</h2>
+      <ul>
+        <li>نقدّم الخدمة «كما هي»، ونبذل جهدنا لتكون الأرقام صحيحة والتقارير في موعدها، لكننا لا نضمن خلوّها من الأخطاء.</li>
+        <li>في حدود ما تسمح به الأنظمة، لا نتحمل مسؤولية أي خسارة أو ضرر ناتج عن قرارات بُنيت على التقارير، أو عن تأخر تقرير أو عدم وصوله.</li>
+        <li>لا نتحمل مسؤولية أعطال الخدمات التي نعتمد عليها، مثل سلة أو خدمات الاستضافة أو البريد.</li>
+      </ul>
+
+      <h2>توقف الخدمة المؤقت</h2>
+      <p>قد تتوقف الخدمة مؤقتًا بسبب صيانة أو تحديث أو عطل في التطبيق أو في سلة أو في أحد مقدمي الخدمة. إذا تأخر تقرير كثيرًا عن موعده بسبب توقف، فقد لا يُرسل ذلك التقرير، ويصلك التقرير التالي في موعده. وإذا انقطع ربط متجرك مع سلة، نراسلك لتعيد ربط التطبيق، وتتوقف التقارير حتى تعيده.</p>
+
+      <h2>تعديل الشروط</h2>
+      <p>قد نعدّل هذه الشروط. ننشر النسخة الجديدة في هذه الصفحة ونغيّر تاريخ «آخر تحديث» أعلاها. استمرارك في استخدام التطبيق بعد التعديل يعني موافقتك على النسخة الجديدة، ويمكنك حذف التطبيق في أي وقت.</p>
+
+      <h2>تواصل معنا</h2>
+      <p>للاستفسارات والدعم: <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a></p>
+    </article>
+
+    <!-- ===================== English ===================== -->
+    <article data-lang="en">
+      <p class="draft">Draft for review</p>
+      <p class="updated">Last updated: November 16, 2026</p>
+
+      <p>These terms govern your use of the Smart Sales Analyst app on Salla. By installing and using the app, you agree to them and to the <a href="privacy.html" data-keep-lang>Privacy Policy</a>.</p>
+
+      <h2>The service</h2>
+      <p>The app reads your store data from Salla (read-only) and emails you PDF reports in Arabic or English, as you choose:</p>
+      <ul>
+        <li><b>Daily:</b> the last 24 hours compared with the same hours a week earlier.</li>
+        <li><b>Weekly:</b> the last 7 full days compared with the week before.</li>
+        <li><b>Monthly:</b> the previous calendar month compared with the month before it.</li>
+        <li><b>Last-30-days report:</b> once, after installation.</li>
+      </ul>
+      <p>The report numbers are calculated by the app's code, and AI (Anthropic) writes the summary, insights and recommendation from those numbers. If that isn't possible, you still get the report with all its numbers, plus a short summary written automatically by the app and no recommendation.</p>
+      <p>You choose the language, delivery time, which reports you get and the email addresses (up to five) in the app settings in your Salla dashboard.</p>
+
+      <h2>Subscription, free trial and cancellation</h2>
+      <ul>
+        <li>Subscription, payment, the free trial and cancellation are all handled by Salla, under Salla's policies. We never receive payment details.</li>
+        <li>The free trial lasts 7 days.</li>
+        <li>Prices, plan details and what each plan includes are shown on the app's page in the Salla App Store, which is the reference.</li>
+        <li>Only the reports included in your plan are sent. The daily report is included in the free trial and the Full plan.</li>
+        <li>If you cancel, reports continue until the end of the paid period as Salla reports it to us, then stop. When a trial or subscription ends without renewal, reports stop.</li>
+        <li>Refund requests are subject to Salla's policies.</li>
+      </ul>
+
+      <h2>Reports are for guidance</h2>
+      <p>Reports, insights and recommendations are there to help. Decisions about your store (prices, stock, offers and so on) are yours, and you are responsible for them. AI-written text may contain inaccurate wording, so check the numbers before any important decision.</p>
+
+      <h2>Numbers may differ from the Salla dashboard</h2>
+      <p>The numbers are based on the data Salla gives us when the report is prepared, and may differ from what the Salla dashboard shows in some cases, including:</p>
+      <ul>
+        <li><b>Order statuses:</b> we count orders that are under review, in progress, completed, shipped, being delivered, delivered and closed. We don't count orders that are canceled, awaiting payment, restored, deleted, or quote requests.</li>
+        <li><b>How we calculate:</b> our net sales are the product total after discounts, excluding tax and shipping.</li>
+        <li><b>Timing:</b> periods are calculated in your store's time zone.</li>
+        <li><b>Later changes:</b> if an order's status or amount changes after a report is prepared, the change won't appear in the report already sent; it appears in later reports that cover that period.</li>
+      </ul>
+
+      <h2>Your responsibilities</h2>
+      <ul>
+        <li>Email addresses you add in the settings must be yours or belong to people who agreed to receive your store's reports.</li>
+        <li>Don't use the app in a way that breaks Salla's policies or applicable laws.</li>
+      </ul>
+
+      <h2>Limitation of liability</h2>
+      <ul>
+        <li>We provide the service "as is". We do our best to keep the numbers correct and the reports on time, but we don't guarantee they are free of errors.</li>
+        <li>To the extent permitted by law, we are not liable for any loss or damage resulting from decisions based on the reports, or from a report being late or not arriving.</li>
+        <li>We are not liable for outages of the services we rely on, such as Salla, hosting or email providers.</li>
+      </ul>
+
+      <h2>Temporary interruptions</h2>
+      <p>The service may stop temporarily for maintenance, updates, or a fault in the app, in Salla or in one of our service providers. If a report is delayed well past its time because of an interruption, that report may not be sent, and the next report arrives on schedule. If your store's connection with Salla breaks, we email you to reconnect the app, and reports pause until you do.</p>
+
+      <h2>Changes to these terms</h2>
+      <p>We may change these terms. We publish the new version on this page and change the "Last updated" date at the top. Continuing to use the app after a change means you accept the new version, and you can uninstall the app at any time.</p>
+
+      <h2>Contact us</h2>
+      <p>Questions and support: <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <nav aria-label="روابط / Links">
+      <a href="./" data-keep-lang><span data-lang="ar">الرئيسية</span><span data-lang="en">Home</span></a>
+      <a href="privacy.html" data-keep-lang><span data-lang="ar">سياسة الخصوصية</span><span data-lang="en">Privacy Policy</span></a>
+      <a href="terms.html" data-keep-lang aria-current="page"><span data-lang="ar">شروط الاستخدام</span><span data-lang="en">Terms of Use</span></a>
+    </nav>
+    <span data-lang="ar">محلل المبيعات الذكي</span><span data-lang="en">Smart Sales Analyst</span> <span class="star">✦</span>
+  </footer>
+
+  <script>
+    (function () {
+      var TEXT = {
+        ar: { title: 'شروط الاستخدام | محلل المبيعات الذكي', description: 'شروط استخدام تطبيق محلل المبيعات الذكي في سلة.', logo: 'شعار محلل المبيعات الذكي' },
+        en: { title: 'Terms of Use | Smart Sales Analyst', description: 'Terms of use for the Smart Sales Analyst app on Salla.', logo: 'Smart Sales Analyst logo' },
+      };
+      function apply(lang) {
+        var root = document.documentElement;
+        root.lang = lang;
+        root.dir = lang === 'en' ? 'ltr' : 'rtl';
+        document.title = TEXT[lang].title;
+        document.querySelector('meta[name="description"]').setAttribute('content', TEXT[lang].description);
+        document.querySelector('header img').alt = TEXT[lang].logo;
+        document.querySelectorAll('[data-set-lang]').forEach(function (a) {
+          a.setAttribute('aria-current', a.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        // روابط الصفحات تحمل اللغة الحالية.
+        document.querySelectorAll('[data-keep-lang]').forEach(function (a) {
+          var base = a.getAttribute('href').split('?')[0];
+          a.setAttribute('href', base + '?lang=' + lang);
+        });
+      }
+      apply(document.documentElement.lang === 'en' ? 'en' : 'ar');
+      document.querySelectorAll('[data-set-lang]').forEach(function (a) {
+        a.addEventListener('click', function (event) {
+          event.preventDefault();
+          var lang = a.getAttribute('data-set-lang');
+          apply(lang);
+          var url = new URL(location.href);
+          url.searchParams.set('lang', lang);
+          history.replaceState(null, '', url);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

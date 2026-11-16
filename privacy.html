@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سياسة الخصوصية | محلل المبيعات الذكي</title>
+  <meta name="description" content="ما نجمعه من متجرك في سلة، وما نحفظه، ومدة حفظه، ومتى نحذفه.">
+  <link rel="icon" type="image/png" href="logo.png?v=2">
+  <script>
+    // اللغة: ?lang=ar أو ?lang=en في الرابط، وإلا لغة المتصفح، والافتراضي عربي (نفس الصفحة الرئيسية).
+    (function () {
+      var param = new URLSearchParams(location.search).get('lang');
+      var browser = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      var lang = param === 'en' || param === 'ar' ? param : /^en\b/i.test(browser) ? 'en' : 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+    })();
+  </script>
+  <style>
+    :root {
+      --brand: #0B7A68;
+      --brand-dark: #08594C;
+      --accent: #FFC27A;
+      --ink: #1C2B28;
+      --muted: #5B6B67;
+      --paper: #FFFFFF;
+      --tint: #EEF6F4;
+      --line: #D7E6E2;
+      --draft: #FFF4E5;
+      --draft-ink: #7A4B00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif;
+      line-height: 1.8;
+    }
+    html[lang="en"] body { font-family: "Segoe UI", -apple-system, "Helvetica Neue", Roboto, Arial, sans-serif; line-height: 1.6; }
+    html[lang="ar"] [data-lang="en"], html[lang="en"] [data-lang="ar"] { display: none !important; }
+
+    header { background: var(--brand); color: #fff; padding: 16px 16px 28px; text-align: center; }
+    .switch { display: flex; justify-content: flex-end; gap: 4px; max-width: 880px; margin: 0 auto 12px; }
+    .switch a {
+      color: #fff; text-decoration: none; font-size: 0.9rem; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.45); min-width: 72px; text-align: center;
+    }
+    .switch a[aria-current="true"] { background: #fff; color: var(--brand-dark); border-color: #fff; font-weight: 600; }
+    header .home { display: inline-block; color: #fff; text-decoration: none; }
+    header img { width: 64px; height: 64px; border-radius: 16px; display: block; margin: 0 auto 8px; }
+    header .app { display: block; font-size: 0.95rem; opacity: 0.9; }
+    header h1 { margin: 4px 0 0; font-size: 1.8rem; line-height: 1.3; }
+
+    main { max-width: 880px; margin: 0 auto; padding: 24px 16px 48px; }
+    .draft { background: var(--draft); color: var(--draft-ink); border: 1px solid #F3D3A4; border-radius: 12px; padding: 10px 14px; font-weight: 600; margin: 0 0 16px; }
+    .updated { color: var(--muted); margin: 0 0 24px; }
+    h2 { color: var(--brand); font-size: 1.25rem; margin: 32px 0 8px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-inline-start: 22px; }
+    li { margin: 0 0 6px; }
+    .box { background: var(--tint); border-radius: 12px; padding: 14px 16px; margin: 0 0 12px; }
+    .box h3 { margin: 0 0 6px; font-size: 1rem; color: var(--brand-dark); }
+    .box ul { margin: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 12px; font-size: 0.95rem; }
+    th, td { border-bottom: 1px solid var(--line); padding: 8px 6px; text-align: start; vertical-align: top; }
+    th { color: var(--brand-dark); }
+    .table-wrap { overflow-x: auto; }
+    main a { color: var(--brand); font-weight: 600; overflow-wrap: anywhere; }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 0 16px 32px; }
+    footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 8px; }
+    footer nav a { color: var(--brand); text-decoration: none; }
+    footer nav a[aria-current="page"] { color: var(--muted); font-weight: 600; }
+    footer .star { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="switch" aria-label="اللغة / Language">
+      <a href="?lang=ar" data-set-lang="ar" lang="ar" dir="rtl">عربي</a>
+      <a href="?lang=en" data-set-lang="en" lang="en" dir="ltr">English</a>
+    </nav>
+    <a class="home" href="./" data-keep-lang>
+      <img src="logo.png?v=2" alt="" width="64" height="64">
+      <span class="app" data-lang="ar">محلل المبيعات الذكي</span>
+      <span class="app" data-lang="en">Smart Sales Analyst</span>
+    </a>
+    <h1 data-lang="ar">سياسة الخصوصية</h1>
+    <h1 data-lang="en">Privacy Policy</h1>
+  </header>
+
+  <main>
+    <!-- ===================== العربي ===================== -->
+    <article data-lang="ar">
+      <p class="draft">مسودة للمراجعة</p>
+      <p class="updated">آخر تحديث: ١٦ نوفمبر ٢٠٢٦</p>
+
+      <h2>من نحن</h2>
+      <p>«محلل المبيعات الذكي» تطبيق في متجر تطبيقات سلة، يرسل لك تقارير عن مبيعات متجرك (يومية وأسبوعية وشهرية) بالبريد الإلكتروني. تشرح هذه الصفحة ما نجمعه من متجرك، وما نحفظه، ومدة حفظه، ومتى نحذفه.</p>
+      <p>للتواصل في أي شيء يخص الخصوصية: <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a></p>
+
+      <h2>بيانات متجرك ملكك</h2>
+      <p>أنت (التاجر) صاحب بيانات متجرك وبيانات عملائك. نحن نعالج هذه البيانات نيابةً عنك ولغرض واحد فقط: إعداد تقاريرك وإرسالها لك.</p>
+      <p>صلاحياتنا في سلة <b>قراءة فقط</b>: الطلبات، والمنتجات، والسلال المتروكة، وبيانات المتجر الأساسية. لا نستطيع تعديل أي شيء في متجرك.</p>
+
+      <h2>ما نحفظه من بيانات الطلبات والسلال</h2>
+      <p>نحفظ نسخة مختصرة من بيانات متجرك، فيها الحقول التي تحتاجها التقارير فقط:</p>
+      <div class="box">
+        <h3>الطلبات</h3>
+        <ul>
+          <li>رقم الطلب في سلة، وتاريخه، وحالته.</li>
+          <li>المبالغ: المجموع قبل الضريبة، والمجموع المدفوع، والخصومات (ومنها كود الكوبون واسمه).</li>
+          <li>طريقة الدفع.</li>
+          <li>المنتجات: رقم كل منتج واسمه والكمية والقيمة.</li>
+          <li>مدينة الشحن (المدينة فقط، بدون العنوان).</li>
+          <li><b>بصمة مشفّرة للعميل</b> بدل رقمه: رمز نحسبه من رقم العميل في سلة بمفتاح سري، ونستخدمه فقط لنعرف هل العميل جديد أو سبق أن طلب. لا نحفظ رقم العميل نفسه، ولا تحتوي البصمة اسمه ولا أي وسيلة للتواصل معه.</li>
+        </ul>
+      </div>
+      <p>الطلبات الملغية أو التي لم تُحسب (مثل التي بانتظار الدفع) نحفظ منها رقمها وتاريخها وحالتها فقط، بدون مبالغ ولا عميل ولا مدينة ولا منتجات.</p>
+      <div class="box">
+        <h3>السلال المتروكة</h3>
+        <ul>
+          <li>رقم السلة في سلة، وتاريخها، وقيمتها قبل الضريبة، وأرقام المنتجات فيها. لا نحفظ أي شيء عن صاحب السلة.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>المنتجات والمخزون</h3>
+        <ul>
+          <li>نقرأ اسم المنتج وسعره وكميته المتوفرة من سلة وقت إعداد التقرير، لنحسب تنبيهات المخزون والمنتجات التي توقف بيعها. لا نحفظ قائمة المنتجات ولا المخزون عندنا.</li>
+        </ul>
+      </div>
+
+      <h2>ما لا نحفظه أبدًا</h2>
+      <ul>
+        <li>اسم العميل.</li>
+        <li>رقم جواله.</li>
+        <li>بريده الإلكتروني.</li>
+        <li>عنوانه (نأخذ اسم المدينة فقط).</li>
+      </ul>
+      <p>ولا نحفظ بيانات حسابك البنكي التي قد تظهر في تفاصيل الطلب في سلة.</p>
+
+      <h2>مدة الحفظ</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>البيانات</th><th>المدة</th></tr>
+          <tr><td>الطلبات والسلال المتروكة</td><td>٩٥ يومًا من تاريخ الطلب أو السلة، ثم تُحذف تلقائيًا. (التقرير الشهري يحتاج بيانات قرابة ثلاثة أشهر للمقارنة ولمعرفة المنتجات التي توقف بيعها.)</td></tr>
+          <tr><td>بصمة العميل وتاريخ أول وآخر طلب نعرفه له</td><td>تُحذف تلقائيًا إذا مرّ ١٢ شهرًا على آخر طلب للعميل.</td></tr>
+          <tr><td>ملف التقرير (PDF)</td><td>يُحذف فور انتهاء إرسال إيميلاته (وصلت أو فشلت أو فات وقتها)، وبحد أقصى ٧ أيام.</td></tr>
+          <tr><td>محتوى الإيميل قبل إرساله</td><td>يُحفظ مشفّرًا، ويُحذف فور انتهاء إرساله (وصل أو فشل أو فات وقته).</td></tr>
+          <tr><td>إشعارات سلة (مثل التثبيت وتغيير الإعدادات)</td><td>تُحفظ مشفّرة إلى أن تُعالَج، ثم يُحذف محتواها.</td></tr>
+          <tr><td>سجل تغييرات الاشتراك (نوع الخطة والتواريخ، بدون أي مبلغ)</td><td>١٢ شهرًا.</td></tr>
+        </table>
+      </div>
+
+      <h2>بياناتك أنت (التاجر)</h2>
+      <ul>
+        <li><b>بيانات المتجر الأساسية:</b> رقم متجرك في سلة واسمه ونوعه ومنطقته الزمنية.</li>
+        <li><b>إعدادات التقرير:</b> اللغة، ووقت الإرسال، والتقارير المفعّلة، ويوم التقرير الأسبوعي والشهري.</li>
+        <li><b>عناوين البريد التي يصلها التقرير</b> (حتى خمسة) كما تدخلها في إعدادات التطبيق. وإذا لم تُدخل أي عنوان، نستخدم بريد الشخص الذي ثبّت التطبيق كما تعطينا إياه سلة.</li>
+        <li><b>مفاتيح الربط مع سلة:</b> محفوظة مشفّرة، ونستخدمها فقط لقراءة بيانات متجرك.</li>
+        <li><b>حالة الاشتراك:</b> الخطة، وتواريخ التجربة المجانية والاشتراك كما ترسلها سلة. لا نستلم ولا نحفظ أي بيانات دفع.</li>
+        <li><b>سجل التقارير:</b> نوع كل تقرير وفترته وحالته (أُرسل أو فشل)، وموضوع التوصية فيه (حتى لا نكرر التوصية نفسها)، بدون ملف التقرير.</li>
+      </ul>
+
+      <h2>كيف نستخدم البيانات</h2>
+      <p>نستخدم البيانات فقط لحساب أرقام تقاريرك، وكتابتها، وإرسالها بالبريد إلى العناوين التي تحددها.</p>
+      <ul>
+        <li>لا نبيع بياناتك ولا بيانات عملائك.</li>
+        <li>لا نستخدمها للإعلانات.</li>
+        <li>لا نشاركها مع أي جهة غير مقدمي الخدمة المذكورين أدناه، وبالقدر الذي تحتاجه الخدمة فقط.</li>
+      </ul>
+
+      <h2>مقدمو الخدمة الذين نعتمد عليهم</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>الجهة</th><th>دورها</th><th>مكان المعالجة</th></tr>
+          <tr><td>Fly.io</td><td>استضافة التطبيق، وحفظ ملفات التقارير مؤقتًا.</td><td>فرانكفورت، ألمانيا</td></tr>
+          <tr><td>Neon</td><td>قاعدة البيانات.</td><td>فرانكفورت، ألمانيا</td></tr>
+          <tr><td>Anthropic</td><td>يكتب ملخص التقرير وملاحظاته وتوصيته. يستلم أرقامًا مجمّعة جاهزة (مثل صافي المبيعات وعدد الطلبات والنسب) مع اسم متجرك وأسماء المنتجات والمدن. لا يستلم أي بيانات عن عميل بعينه، ولا رقم أي طلب.</td><td>الولايات المتحدة</td></tr>
+          <tr><td>Google (Gmail)</td><td>إرسال التقارير بالبريد الإلكتروني. يمر عبره محتوى الإيميل وملف التقرير المرفق وعنوان المستلم.</td><td>الولايات المتحدة ومواقع أخرى لدى Google</td></tr>
+        </table>
+      </div>
+      <p><b>تنبيه مهم:</b> تُعالَج بيانات متجرك خارج المملكة العربية السعودية، في ألمانيا والولايات المتحدة. باستخدامك التطبيق فأنت على علم بذلك.</p>
+      <p>الأرقام كلها يحسبها كودنا، ودور Anthropic يقتصر على صياغة النص من الأرقام الجاهزة.</p>
+
+      <h2>عند حذف التطبيق</h2>
+      <p>عندما تحذف التطبيق من متجرك، نحذف فورًا:</p>
+      <ul>
+        <li>كل الطلبات والسلال المحفوظة، وبصمات العملاء وتواريخ طلباتهم.</li>
+        <li>عناوين البريد التي يصلها التقرير، وأي إيميل لم يُرسل بعد.</li>
+        <li>ملفات التقارير.</li>
+        <li>مفاتيح الربط مع سلة.</li>
+        <li>محتوى إشعارات سلة الخاصة بمتجرك.</li>
+      </ul>
+      <p>وتعود إعدادات التقرير إلى الوضع الافتراضي، وتتوقف كل التقارير.</p>
+      <p>يبقى بعد الحذف:</p>
+      <ul>
+        <li>سجل أساسي لمتجرك: رقمه في سلة واسمه ونوعه وتاريخ التثبيت والحذف، و<b>تاريخ بدء التجربة المجانية وتاريخ تقرير آخر ٣٠ يومًا</b>. نبقيهما حتى لا تتكرر التجربة المجانية أو التقرير الترحيبي عند إعادة التثبيت.</li>
+        <li>سجل التقارير التي أُرسلت (نوعها وفترتها وحالتها وموضوع التوصية)، بدون ملفات التقارير.</li>
+        <li>سجل تغييرات الاشتراك، ويُحذف بعد ١٢ شهرًا.</li>
+      </ul>
+
+      <h2>إيقاف الإرسال لعنوان بريد</h2>
+      <p>أي شخص يصله تقرير منّا يستطيع أن يطلب إيقاف الإرسال إلى بريده، بمراسلتنا على <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>. نضيف العنوان إلى قائمة «عدم الإرسال»، فلا يصله منّا أي إيميل من أي متجر، حتى لو أُضيف في إعدادات التطبيق.</p>
+      <p>تبقى هذه القائمة حتى بعد حذف التطبيق، لأن الغرض منها ألا نراسل هذا العنوان مرة أخرى.</p>
+
+      <h2>كيف نحمي البيانات</h2>
+      <ul>
+        <li>نشفّر مفاتيح الربط مع سلة، ومحتوى الإيميلات قبل إرسالها، ومحتوى إشعارات سلة.</li>
+        <li>نتحقق من توقيع كل إشعار يصلنا من سلة قبل قبوله.</li>
+        <li>بيئة التشغيل وقاعدة بياناتها منفصلة عن بيئة التطوير.</li>
+        <li>الوصول إلى الخوادم وقاعدة البيانات مقتصر على مطوّر التطبيق.</li>
+        <li>سجلات التشغيل لا تحتوي أسماء ولا عناوين بريد ولا محتوى الطلبات.</li>
+      </ul>
+
+      <h2>تحديث هذه السياسة</h2>
+      <p>قد نحدّث هذه السياسة إذا تغيّر ما نجمعه أو طريقة عمل التطبيق. ننشر النسخة الجديدة في هذه الصفحة ونغيّر تاريخ «آخر تحديث» أعلاها.</p>
+
+      <h2>تواصل معنا</h2>
+      <p>لأي سؤال عن بياناتك: <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a></p>
+    </article>
+
+    <!-- ===================== English ===================== -->
+    <article data-lang="en">
+      <p class="draft">Draft for review</p>
+      <p class="updated">Last updated: November 16, 2026</p>
+
+      <h2>Who we are</h2>
+      <p>Smart Sales Analyst is an app in the Salla App Store that emails you reports on your store's sales (daily, weekly and monthly). This page explains what we collect from your store, what we keep, for how long, and when we delete it.</p>
+      <p>For anything about privacy: <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a></p>
+
+      <h2>Your store data belongs to you</h2>
+      <p>You, the merchant, own your store data and your customers' data. We process it on your behalf for one purpose only: preparing and sending your reports.</p>
+      <p>Our Salla access is <b>read-only</b>: orders, products, abandoned carts and basic store information. We cannot change anything in your store.</p>
+
+      <h2>What we keep from orders and carts</h2>
+      <p>We keep a reduced copy of your store data with only the fields the reports need:</p>
+      <div class="box">
+        <h3>Orders</h3>
+        <ul>
+          <li>The Salla order number, date and status.</li>
+          <li>Amounts: subtotal before tax, total paid, and discounts (including the coupon code and name).</li>
+          <li>Payment method.</li>
+          <li>Products: each product's ID, name, quantity and value.</li>
+          <li>Shipping city (the city only, not the address).</li>
+          <li><b>An encrypted customer fingerprint</b> instead of the customer's ID: a code we compute from the Salla customer ID with a secret key, used only to tell whether a customer is new or has ordered before. We don't keep the customer ID itself, and the fingerprint contains no name or contact details.</li>
+        </ul>
+      </div>
+      <p>For canceled orders and orders that aren't counted (such as those awaiting payment), we keep only the order number, date and status, with no amounts, customer, city or products.</p>
+      <div class="box">
+        <h3>Abandoned carts</h3>
+        <ul>
+          <li>The Salla cart number, date, value before tax and the product IDs in it. We keep nothing about the cart's owner.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Products and stock</h3>
+        <ul>
+          <li>We read product names, prices and available quantities from Salla when preparing a report, to work out stock alerts and products that stopped selling. We don't keep the product list or stock levels.</li>
+        </ul>
+      </div>
+
+      <h2>What we never keep</h2>
+      <ul>
+        <li>Customer names.</li>
+        <li>Phone numbers.</li>
+        <li>Email addresses.</li>
+        <li>Addresses (we take the city name only).</li>
+      </ul>
+      <p>We also don't keep the bank account details that may appear in Salla order details.</p>
+
+      <h2>How long we keep data</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Data</th><th>Period</th></tr>
+          <tr><td>Orders and abandoned carts</td><td>95 days from the order or cart date, then deleted automatically. (The monthly report needs about three months of data for comparisons and to find products that stopped selling.)</td></tr>
+          <tr><td>Customer fingerprint with the first and last order date we know of</td><td>Deleted automatically once 12 months pass since the customer's last order.</td></tr>
+          <tr><td>Report file (PDF)</td><td>Deleted as soon as its emails are done (delivered, failed or expired), and within 7 days at most.</td></tr>
+          <tr><td>Email content before sending</td><td>Kept encrypted, and deleted as soon as sending is done (delivered, failed or expired).</td></tr>
+          <tr><td>Salla notifications (such as installation and settings changes)</td><td>Kept encrypted until processed, then their content is deleted.</td></tr>
+          <tr><td>Subscription change log (plan type and dates, no amounts)</td><td>12 months.</td></tr>
+        </table>
+      </div>
+
+      <h2>Your data as a merchant</h2>
+      <ul>
+        <li><b>Basic store information:</b> your Salla store ID, store name, store type and time zone.</li>
+        <li><b>Report settings:</b> language, delivery time, enabled reports, and the weekly and monthly report days.</li>
+        <li><b>Report email addresses</b> (up to five) as you enter them in the app settings. If you enter none, we use the email of the person who installed the app, as provided by Salla.</li>
+        <li><b>Salla connection keys:</b> stored encrypted, and used only to read your store data.</li>
+        <li><b>Subscription status:</b> your plan and the trial and subscription dates as Salla sends them. We never receive or keep payment details.</li>
+        <li><b>Report log:</b> each report's type, period and status (sent or failed), and its recommendation topic (so we don't repeat the same recommendation), without the report file.</li>
+      </ul>
+
+      <h2>How we use data</h2>
+      <p>We use data only to calculate your report numbers, write the report, and email it to the addresses you choose.</p>
+      <ul>
+        <li>We don't sell your data or your customers' data.</li>
+        <li>We don't use it for advertising.</li>
+        <li>We don't share it with anyone other than the service providers listed below, and only as much as the service needs.</li>
+      </ul>
+
+      <h2>Service providers we rely on</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Provider</th><th>Role</th><th>Where data is processed</th></tr>
+          <tr><td>Fly.io</td><td>Hosts the app and temporarily stores report files.</td><td>Frankfurt, Germany</td></tr>
+          <tr><td>Neon</td><td>Database.</td><td>Frankfurt, Germany</td></tr>
+          <tr><td>Anthropic</td><td>Writes the report summary, insights and recommendation. It receives ready-made aggregate numbers (such as net sales, order count and percentages) along with your store name and product and city names. It receives no data about any individual customer and no order numbers.</td><td>United States</td></tr>
+          <tr><td>Google (Gmail)</td><td>Sends the reports by email. The email content, the attached report and the recipient address pass through it.</td><td>United States and other Google locations</td></tr>
+        </table>
+      </div>
+      <p><b>Important:</b> your store data is processed outside Saudi Arabia, in Germany and the United States. By using the app, you acknowledge this.</p>
+      <p>All numbers are calculated by our own code; Anthropic only turns the ready-made numbers into text.</p>
+
+      <h2>When you uninstall the app</h2>
+      <p>When you remove the app from your store, we immediately delete:</p>
+      <ul>
+        <li>All stored orders and carts, and customer fingerprints with their order dates.</li>
+        <li>The report email addresses, and any email not yet sent.</li>
+        <li>Report files.</li>
+        <li>The Salla connection keys.</li>
+        <li>The content of Salla notifications for your store.</li>
+      </ul>
+      <p>Report settings go back to the defaults, and all reports stop.</p>
+      <p>What remains after uninstalling:</p>
+      <ul>
+        <li>A basic record of your store: its Salla ID, name, type, installation and removal dates, and <b>the date your free trial started and the date of your last-30-days report</b>. We keep these so the free trial and the welcome report aren't repeated if you reinstall.</li>
+        <li>The log of reports sent (type, period, status and recommendation topic), without the report files.</li>
+        <li>The subscription change log, deleted after 12 months.</li>
+      </ul>
+
+      <h2>Stopping emails to an address</h2>
+      <p>Anyone who receives a report from us can ask us to stop sending to their address by writing to <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a>. We add the address to a do-not-send list, and it will no longer receive any email from us for any store, even if it is added in the app settings.</p>
+      <p>This list stays after the app is uninstalled, because its purpose is to make sure we don't email that address again.</p>
+
+      <h2>How we protect data</h2>
+      <ul>
+        <li>We encrypt the Salla connection keys, email content before sending, and the content of Salla notifications.</li>
+        <li>We verify the signature of every notification from Salla before accepting it.</li>
+        <li>The production environment and its database are separate from development.</li>
+        <li>Access to the servers and database is limited to the app's developer.</li>
+        <li>Operational logs contain no names, email addresses or order contents.</li>
+      </ul>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy if what we collect or how the app works changes. We publish the new version on this page and change the "Last updated" date at the top.</p>
+
+      <h2>Contact us</h2>
+      <p>For any question about your data: <a href="mailto:salla.analyst.reports@gmail.com">salla.analyst.reports@gmail.com</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <nav aria-label="روابط / Links">
+      <a href="./" data-keep-lang><span data-lang="ar">الرئيسية</span><span data-lang="en">Home</span></a>
+      <a href="privacy.html" data-keep-lang aria-current="page"><span data-lang="ar">سياسة الخصوصية</span><span data-lang="en">Privacy Policy</span></a>
+      <a href="terms.html" data-keep-lang><span data-lang="ar">شروط الاستخدام</span><span data-lang="en">Terms of Use</span></a>
+    </nav>
+    <span data-lang="ar">محلل المبيعات الذكي</span><span data-lang="en">Smart Sales Analyst</span> <span class="star">✦</span>
+  </footer>
+
+  <script>
+    (function () {
+      var TEXT = {
+        ar: { title: 'سياسة الخصوصية | محلل المبيعات الذكي', description: 'ما نجمعه من متجرك في سلة، وما نحفظه، ومدة حفظه، ومتى نحذفه.', logo: 'شعار محلل المبيعات الذكي' },
+        en: { title: 'Privacy Policy | Smart Sales Analyst', description: 'What we collect from your Salla store, what we keep, for how long, and when we delete it.', logo: 'Smart Sales Analyst logo' },
+      };
+      function apply(lang) {
+        var root = document.documentElement;
+        root.lang = lang;
+        root.dir = lang === 'en' ? 'ltr' : 'rtl';
+        document.title = TEXT[lang].title;
+        document.querySelector('meta[name="description"]').setAttribute('content', TEXT[lang].description);
+        document.querySelector('header img').alt = TEXT[lang].logo;
+        document.querySelectorAll('[data-set-lang]').forEach(function (a) {
+          a.setAttribute('aria-current', a.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        // روابط الصفحات تحمل اللغة الحالية.
+        document.querySelectorAll('[data-keep-lang]').forEach(function (a) {
+          var base = a.getAttribute('href').split('?')[0];
+          a.setAttribute('href', base + '?lang=' + lang);
+        });
+      }
+      apply(document.documentElement.lang === 'en' ? 'en' : 'ar');
+      document.querySelectorAll('[data-set-lang]').forEach(function (a) {
+        a.addEventListener('click', function (event) {
+          event.preventDefault();
+          var lang = a.getAttribute('data-set-lang');
+          apply(lang);
+          var url = new URL(location.href);
+          url.searchParams.set('lang', lang);
+          history.replaceState(null, '', url);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

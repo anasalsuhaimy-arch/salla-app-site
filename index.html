@@ -61,7 +61,9 @@
     ul.points { margin: 0; padding-inline-start: 20px; }
     .contact a { color: var(--brand); font-weight: 600; }
     footer { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 0 16px 32px; }
-    footer span { color: var(--accent); }
+    footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 8px; }
+    footer nav a { color: var(--brand); text-decoration: none; }
+    footer .star { color: var(--accent); }
   </style>
 </head>
 <body>
@@ -121,7 +123,13 @@
     </section>
   </main>
 
-  <footer><span data-lang="ar">محلل المبيعات الذكي</span><span data-lang="en">Smart Sales Analyst</span> <span>✦</span></footer>
+  <footer>
+    <nav aria-label="روابط / Links">
+      <a href="privacy.html" data-keep-lang><span data-lang="ar">سياسة الخصوصية</span><span data-lang="en">Privacy Policy</span></a>
+      <a href="terms.html" data-keep-lang><span data-lang="ar">شروط الاستخدام</span><span data-lang="en">Terms of Use</span></a>
+    </nav>
+    <span data-lang="ar">محلل المبيعات الذكي</span><span data-lang="en">Smart Sales Analyst</span> <span class="star">✦</span>
+  </footer>
 
   <script>
     // العنوان والوصف والاتجاه وزر اللغة الحالي يتغيرون مع اللغة. زر التبديل يغيّر الرابط (?lang=)
@@ -140,6 +148,11 @@
         document.querySelector('header img').alt = TEXT[lang].logo;
         document.querySelectorAll('[data-set-lang]').forEach(function (a) {
           a.setAttribute('aria-current', a.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        // روابط الصفحات تحمل اللغة الحالية.
+        document.querySelectorAll('[data-keep-lang]').forEach(function (a) {
+          var base = a.getAttribute('href').split('?')[0];
+          a.setAttribute('href', base + '?lang=' + lang);
         });
       }
       apply(document.documentElement.lang === 'en' ? 'en' : 'ar');
